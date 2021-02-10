@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchor" cacheShape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1082.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane fx:id="messagePane" layoutX="33.0" layoutY="106.0" prefHeight="412.0" prefWidth="1011.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 5;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="fullTab" text="Общий пакет">
+            <content>
+              <AnchorPane fx:id="FullAnchor" centerShape="false" maxHeight="600.0" maxWidth="1012.0" minHeight="0.0" minWidth="0.0" prefHeight="317.0" prefWidth="1011.0" scaleShape="false">
+                     <children>
+                        <Label fx:id="categLabel" layoutX="499.0" layoutY="20.0" prefHeight="35.0" prefWidth="200.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;" text="Выберите категорию">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </Label>
+                        <ComboBox fx:id="categCmb" layoutX="718.0" layoutY="22.0" prefHeight="25.0" prefWidth="231.0" style="-fx-border-width: 2;" />
+                        <Label fx:id="latLabelF" layoutX="20.0" layoutY="92.0" prefHeight="35.0" prefWidth="90.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;" text="Широта">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="latTextF" layoutX="129.0" layoutY="93.0" prefHeight="33.0" prefWidth="185.0">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </TextField>
+                        <Pane fx:id="latPaneF" layoutX="345.0" layoutY="81.0" prefHeight="76.0" prefWidth="169.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;">
+                           <children>
+                              <RadioButton id="id_northRadF" fx:id="northRadF" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#onRadClickHandler" selected="true" text="Северная">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton id="id_southRadF" fx:id="southRadF" layoutX="22.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#onRadClickHandler" text="Южная">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </Pane>
+                        <Label fx:id="longLabelF" layoutX="20.0" layoutY="186.0" prefHeight="35.0" prefWidth="90.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;" text="Долгота">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="longTextF" layoutX="129.0" layoutY="185.0" prefHeight="33.0" prefWidth="185.0">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </TextField>
+                        <Pane fx:id="longPaneF" layoutX="345.0" layoutY="175.0" prefHeight="76.0" prefWidth="169.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;">
+                           <children>
+                              <RadioButton id="id_eastRadF" fx:id="eastRadF" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#onRadClickHandler" selected="true" text="Восточная">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton id="id_westRadF" fx:id="westRadF" layoutX="22.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#onRadClickHandler" prefHeight="20.0" prefWidth="101.0" text="Западная">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </Pane>
+                        <Label fx:id="descLabel" layoutX="559.0" layoutY="76.0" prefHeight="35.0" prefWidth="170.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;" text="Введите описание">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </Label>
+                        <TextArea fx:id="descArea" layoutX="559.0" layoutY="126.0" prefHeight="223.0" prefWidth="429.0" style="-fx-border-width: 3;" wrapText="true">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </TextArea>
+                        <TextArea fx:id="fileArea" editable="false" layoutX="236.0" layoutY="272.0" prefHeight="76.0" prefWidth="280.0" style="-fx-text-fill: #0000CD;">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </TextArea>
+                        <Label fx:id="fileLabel" layoutX="20.0" layoutY="266.0" prefHeight="35.0" prefWidth="180.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;" text="Прикрепить файлы">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </Label>
+                        <Button fx:id="choiceBtn" layoutX="20.0" layoutY="315.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="197.0" text="Выбрать...">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="themeLabelF" layoutX="20.0" layoutY="20.0" prefHeight="35.0" prefWidth="140.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;" text="Введите тему">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="themeTextF" layoutX="169.0" layoutY="22.0" prefHeight="30.0" prefWidth="310.0">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="msgTab" text="Сообщение">
+            <content>
+              <AnchorPane fx:id="MsgAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="themeLabelM" layoutX="20.0" layoutY="20.0" prefHeight="35.0" prefWidth="135.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;" text="Введите тему">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="themeTextM" layoutX="169.0" layoutY="22.0" prefHeight="30.0" prefWidth="310.0">
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></TextField>
+                        <Label layoutX="20.0" layoutY="84.0" prefHeight="65.0" prefWidth="135.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;" text="Введите сообщение" wrapText="true">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </Label>
+                        <TextArea fx:id="msgArea" layoutX="169.0" layoutY="84.0" prefHeight="279.0" prefWidth="819.0" wrapText="true">
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></TextArea>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="coordTab" text="Координаты">
+              <content>
+                <AnchorPane fx:id="CoordAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="latPaneC" layoutX="364.0" layoutY="69.0" prefHeight="76.0" prefWidth="169.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;">
+                           <children>
+                              <RadioButton id="id_northRadC" fx:id="northRadС" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" selected="true" text="Северная">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton id="id_southRadС" fx:id="southRadС" layoutX="22.0" layoutY="45.0" mnemonicParsing="false" text="Южная">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="longPaneC" layoutX="364.0" layoutY="168.0" prefHeight="76.0" prefWidth="169.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;">
+                           <children>
+                              <RadioButton id="id_eastRadC" fx:id="eastRadC" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" selected="true" text="Восточная">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton id="id_westRadC" fx:id="westRadC" layoutX="22.0" layoutY="45.0" mnemonicParsing="false" text="Западная">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </Pane>
+                        <Label fx:id="longLabelC" layoutX="20.0" layoutY="192.0" prefHeight="35.0" prefWidth="90.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;" text="Долгота">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="latLabelC" layoutX="20.0" layoutY="92.0" prefHeight="35.0" prefWidth="90.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;" text="Широта">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="latTextC" layoutX="132.0" layoutY="90.0" prefHeight="33.0" prefWidth="185.0">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </TextField>
+                        <TextField fx:id="longTextC" layoutX="132.0" layoutY="190.0" prefHeight="33.0" prefWidth="185.0">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </TextField>
+                        <Label layoutX="20.0" layoutY="20.0" prefHeight="35.0" prefWidth="200.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;" text="Введите координаты">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="sendBtn" layoutX="33.0" layoutY="553.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="387.0" text="Отправить ">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Button>
+      <Pane fx:id="usersPane" layoutX="640.0" layoutY="13.0" prefHeight="76.0" prefWidth="401.0" style="-fx-border-width: 2; -fx-border-color: #FF0000; -fx-border-radius: 20;">
+         <children>
+            <Label fx:id="userLabel" layoutX="14.0" layoutY="14.0" text="User:">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="idLabel" layoutX="14.0" layoutY="38.0" text="Id:">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="userLabelT" layoutX="77.0" layoutY="14.0" prefHeight="17.0" prefWidth="169.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label fx:id="idLabelT" layoutX="77.0" layoutY="38.0" prefHeight="17.0" prefWidth="169.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <ImageView fx:id="userImg" fitHeight="50.0" fitWidth="50.0" layoutX="262.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="infoLabel" alignment="CENTER" layoutX="324.0" layoutY="48.0" prefWidth="60.0" text="Сеть" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="conImg" fitHeight="36.0" fitWidth="36.0" layoutX="337.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <ComboBox fx:id="vesselCmb" layoutX="227.0" layoutY="40.0" prefHeight="25.0" prefWidth="240.0" promptText="Судно" />
+      <Label fx:id="vesselLabel" accessibleRole="TEXT_AREA" layoutX="33.0" layoutY="43.0" prefHeight="35.0" prefWidth="175.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;" text="Выберите судно">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+         <padding>
+            <Insets left="12.0" />
+         </padding>
+      </Label>
+      <Label fx:id="shipLabel" layoutX="488.0" layoutY="43.0" prefHeight="35.0" prefWidth="122.0" style="-fx-border-width: 1; -fx-border-color: #FFFFFF; -fx-border-radius: 20;">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+         <padding>
+            <Insets left="12.0" />
+         </padding>
+      </Label>
+      <TextArea fx:id="consoleText" editable="false" layoutX="444.0" layoutY="532.0" prefHeight="75.0" prefWidth="601.0" style="-fx-border-color: #FFFFFF; -fx-border-width: 2; -fx-text-fill: #0033CC;" wrapText="true">
+         <font>
+            <Font name="Arial Black" size="11.0" />
+         </font>
+      </TextArea>
+      <ProgressIndicator fx:id="sendProg" layoutX="969.0" layoutY="534.0" prefHeight="75.0" prefWidth="75.0" progress="0.0" visible="false" />
+   </children>
+</AnchorPane>

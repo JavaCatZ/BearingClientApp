@@ -1,0 +1,176 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+/*************************All styles for application's components*********************************/
+.anchor-pane
+{
+  -fx-border-color: #0250a3;  
+}
+
+.tab
+{
+   -fx-background-color: #0250a3;
+   -fx-background-insets: 0 1 0 1,0,0;
+}
+
+.tab-pane.floating
+{
+   -fx-background-color: #0066CC;
+}
+
+.tab-pane:top *.tab-header-area 
+{
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.416667em 0.166667em 0.0em 0.0em;
+}
+
+.tab-pane .tab-header-area .tab-header-background 
+{
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:90px;
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #0250a3;
+}
+
+.tab .tab-label 
+{ 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #DAA520;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label 
+{ 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #FFFFFF;
+}
+
+#varNumberText
+{
+  -fx-background-color: transparent;
+  -fx-text-fill: #FFFFFF;
+  -fx-font-weight: bold;
+  -fx-font-family: Arial;
+  -fx-font-size: 14px;
+}
+
+.label
+{
+  -fx-background-color: transparent;
+  -fx-text-fill: #FFFFFF;
+  -fx-font-weight: bold;
+  -fx-font-size: 14px;
+}
+
+#startLabel
+{
+  -fx-background-color: transparent;
+  -fx-text-fill: #FFFFFF;
+  -fx-font-weight: bold;
+  -fx-font-size: 22px;
+}
+
+#usersLabel
+{
+  -fx-background-color: transparent;
+  -fx-text-fill: #DAA520;
+  -fx-font-weight: bold;
+  -fx-font-size: 17px;
+}
+
+#adminLabel
+{
+  -fx-background-color: transparent;
+  -fx-text-fill: #C0C0C0;
+  -fx-font-weight: bold;
+  -fx-font-size: 18px;
+}
+
+#labelStyle
+{
+  -fx-background-color: transparent;
+  -fx-text-fill: #0250a3;
+  -fx-font-weight: bold;
+  -fx-font-size: 14px;
+}
+
+.radio-button
+{
+  -fx-background-color: transparent;
+  -fx-text-fill: #FFFFFF;
+  -fx-font-weight: bold;
+  -fx-font-size: 14px;
+}
+
+.text-field
+{
+   -fx-background-color: transparent;
+   -fx-border-color: #0250a3;
+   -fx-text-fill: white;
+   -fx-font-size: 16px;
+   -fx-font-weight: bold;
+   -fx-background-radius: 30;
+   -fx-border-radius: 30;
+}
+
+.password-field
+{
+   -fx-background-color: transparent;
+   -fx-border-color: #0250a3;
+   -fx-text-fill: white;
+}
+
+.button
+{
+   -fx-background-color: transparent;
+   -fx-border-color: white;
+   -fx-background-radius: 30;
+   -fx-border-radius: 30;
+   -fx-text-fill: white;
+   -fx-font-weight: bold;
+   -fx-font-size: 14px;
+   -fx-padding: 10 20 10 20;
+}
+
+.button:hover
+{
+   -fx-background-color: #0250a3;
+   -fx-border-color: #ef1a38;
+   -fx-text-fill: #FFFFFF;
+}
+
+#button
+{
+   -fx-font: bold 12pt ArialBlack;
+   -fx-text-fill: #FF9900;
+}
+
+.combo-box-base 
+{
+   -fx-background-color: transparent;
+   -fx-border-color: #0250a3;
+   -fx-background-radius: 30;
+   -fx-border-radius: 30;
+}
+
+.combo-box 
+{
+   -fx-font: bold 14pt ArialBlack;
+}
+
+.combo-box .list-cell
+{
+   -fx-text-fill: #FFFFFF;	
+} 
+
+.combo-box .list-view .list-cell
+{
+   -fx-text-fill: #000000;	
+} 
